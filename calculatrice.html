@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+        }
+        .btn{
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+    <label for="">Nombre 1:</label>
+    <input type="text" name="" id="nomb1">
+    <label for="">Nombre 2:</label>
+    <input type="text" name="" id="nomb2">
+    <br>
+     <button   type="button" id="btn">calculer</button>
+     <label for="">Addition:</label>
+     <input type="text" name="" id="addi">
+     <label for="">Multiplication:</label>
+     <input type="text" name="" id="multi">
+     <label for="">Division :</label>
+     <input type="text" name="" id="Div">
+     <label for="">Modulo :</label>
+     <input type="text" name="" id="Mod">
+    </form>
+    <script>
+   function calculate(){
+    event.preventDefault();
+    let nomb1 = Number(document.getElementById("nomb1").value);
+    let nomb2 = Number(document.getElementById("nomb2").value);
+    if (nomb2 === 0) {
+        alert("Division par 0 impossible");
+    } else {
+        document.getElementById("addi").value = nomb1 + nomb2;
+        document.getElementById("multi").value = nomb1 * nomb2;
+        document.getElementById("Mod").value = nomb1 % nomb2;
+        document.getElementById("Div").value = nomb1 / nomb2;
+    }
+}
+
+document.getElementById("btn").addEventListener("click", calculate);
+
+ 
+    
+    </script>
+</body>
+</html>
